@@ -1,0 +1,44 @@
+
+body{
+    background-color: rgb(48, 48, 48);
+    background-image: url(https://wallpaperaccess.com/full/5016230.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 20px;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+h2{
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    background-color: rgba(19, 19, 19, 0.664);
+    border: 2px rgb(27, 27, 27) solid;
+    border-radius: 20px;
+    justify-content: space-around;
+    min-width: 900px;
+    min-height: 100px;
+}
+
