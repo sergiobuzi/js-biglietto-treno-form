@@ -7,25 +7,6 @@
 
 
 
-//input nome utente
-
-const inputnome = document.getElementById("nomeuser");
-console.log("nome utente:", inputnome.value);
-
-
-
-//input quantita km da percorrere
-
-const inputkm = document.getElementById("userkm");
-console.log("quantita km da percorrere:", inputkm.value);
-
-
-
-//input eta utente
-
-const inputeta = document.getElementById("userage")
-console.log("eta utente:", inputeta.value);
-
 
 
 //selezione del bottone invio dati
@@ -35,6 +16,25 @@ const sendButton = document.getElementById("send");
 sendButton.addEventListener("click",
 
     function(){
+
+        //input nome utente
+
+        const inputnome = document.getElementById("nomeuser");
+        console.log("nome utente:", inputnome.value);
+
+
+
+        //input quantita km da percorrere
+
+        const inputkm = document.getElementById("userkm");
+        console.log("quantita km da percorrere:", inputkm.value);
+
+
+
+        //input eta utente
+
+        const inputeta = document.getElementById("userage")
+        console.log("eta utente:", inputeta.value);
       
         //calcolo il prezzo del bigletto 
 
