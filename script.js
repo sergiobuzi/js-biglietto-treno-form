@@ -26,14 +26,14 @@ sendButton.addEventListener("click",
 
         //input quantita km da percorrere
 
-        const inputkm = document.getElementById("userkm");
+        const inputkm = parseFloat(document.getElementById("userkm"));
         console.log("quantita km da percorrere:", inputkm.value);
 
 
 
         //input eta utente
 
-        const inputeta = document.getElementById("userage");
+        const inputeta = parseFloat(document.getElementById("userage"));
         console.log("eta utente:", inputeta.value);
       
         //calcolo il prezzo del bigletto 
