@@ -23,37 +23,37 @@ sendButton.addEventListener("click",
         console.log("nome utente:", inputnome.value);
 
 
-
+// 
         //input quantita km da percorrere
 
-        const inputkm = parseFloat(document.getElementById("userkm"));
+        const inputkm = parseFloat(document.getElementById("userkm").value);
         console.log("quantita km da percorrere:", inputkm.value);
 
 
 
         //input eta utente
 
-        const inputeta = parseFloat(document.getElementById("userage"));
+        const inputeta = parseFloat(document.getElementById("userage").value);
         console.log("eta utente:", inputeta.value);
       
         //calcolo il prezzo del bigletto 
 
-        const prezzokm = parseInt(inputkm * 0.21);
+        const prezzokm = parseFloat(inputkm * 0.21).toFixed(2);
         console.log("costo del biglietto al km:", prezzokm);
 
         if (inputeta < 18) {
-            let prezzounder18 = parseInt(prezzokm * 0.8);
+            let prezzounder18 = parseFloat(prezzokm * 0.8).toFixed(2);
             console.log("costo biglietto under18", prezzounder18);
-            document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzounder18} $`;
+            document.getElementById('prezzo').innerHTML= `Ciao ${inputnome.value} il costo del tuo biglietto è di: ${prezzounder18} $`;
 
         } else if (inputeta > 65) {
-            let prezzover65 = parseInt(prezzokm * 0.6);
+            let prezzover65 = parseFloat(prezzokm * 0.6).toFixed(2);
             console.log("costo biglietto over65", prezzover65);
-            document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzover65} $`;
+            document.getElementById('prezzo').innerHTML= `Ciao ${inputnome.value} il costo del tuo biglietto è di: ${prezzover65} $`;
 
         } else{
             console.log("costo biglietto intero",prezzokm);
-            document.getElementById('prezzo').innerHTML=`Il costo del tuo biglietto è di: ${prezzokm} $`;
+            document.getElementById('prezzo').innerHTML=`Ciao ${inputnome.value} il costo del tuo biglietto è di: ${prezzokm} $`;
         }
 
     }
