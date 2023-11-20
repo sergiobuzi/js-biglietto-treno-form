@@ -14,7 +14,7 @@ console.log("nome utente:", inputnome.value);
 
 
 
-//input quantita km da percorrere e calcolo costo al km
+//input quantita km da percorrere
 
 const inputkm = document.getElementById("userkm");
 console.log("quantita km da percorrere:", inputkm.value);
@@ -28,28 +28,6 @@ console.log("eta utente:", inputeta.value);
 
 
 
-//calcolo il prezzo del bigletto 
-
-const prezzokm = parseFloat(inputkm * 0.21);
-console.log("costo del biglietto al km:", prezzokm);
-
-if (inputeta < 18) {
-    let prezzounder18 = parseFloat(prezzokm * 0.8);
-    console.log("costo biglietto under18", prezzounder18);
-    document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzounder18} $`;
-
-} else if (inputeta > 65) {
-    let prezzover65 = parseFloat(prezzokm * 0.6);
-    console.log("costo biglietto over65", prezzover65);
-    document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzover65} $`;
-
-} else{
-    console.log("costo biglietto intero",prezzokm);
-    document.getElementById('prezzo').innerHTML=`Il costo del tuo biglietto: ${prezzokm} $`;
-}
-
-
-
 //selezione del bottone invio dati
 
 const sendButton = document.getElementById("send");
@@ -58,6 +36,25 @@ sendButton.addEventListener("click",
 
     function(){
       
+        //calcolo il prezzo del bigletto 
+
+        const prezzokm = parseFloat(inputkm * 0.21);
+        console.log("costo del biglietto al km:", prezzokm);
+
+        if (inputeta < 18) {
+            let prezzounder18 = parseFloat(prezzokm * 0.8);
+            console.log("costo biglietto under18", prezzounder18);
+            document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzounder18} $`;
+
+        } else if (inputeta > 65) {
+            let prezzover65 = parseFloat(prezzokm * 0.6);
+            console.log("costo biglietto over65", prezzover65);
+            document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzover65} $`;
+
+        } else{
+            console.log("costo biglietto intero",prezzokm);
+            document.getElementById('prezzo').innerHTML=`Il costo del tuo biglietto: ${prezzokm} $`;
+        }
 
     }
 
