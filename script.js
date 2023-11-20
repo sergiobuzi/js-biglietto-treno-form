@@ -33,27 +33,27 @@ sendButton.addEventListener("click",
 
         //input eta utente
 
-        const inputeta = document.getElementById("userage")
+        const inputeta = document.getElementById("userage");
         console.log("eta utente:", inputeta.value);
       
         //calcolo il prezzo del bigletto 
 
-        const prezzokm = parseFloat(inputkm * 0.21);
+        const prezzokm = parseInt(inputkm * 0.21);
         console.log("costo del biglietto al km:", prezzokm);
 
         if (inputeta < 18) {
-            let prezzounder18 = parseFloat(prezzokm * 0.8);
+            let prezzounder18 = parseInt(prezzokm * 0.8);
             console.log("costo biglietto under18", prezzounder18);
             document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzounder18} $`;
 
         } else if (inputeta > 65) {
-            let prezzover65 = parseFloat(prezzokm * 0.6);
+            let prezzover65 = parseInt(prezzokm * 0.6);
             console.log("costo biglietto over65", prezzover65);
             document.getElementById('prezzo').innerHTML= `Il costo del tuo biglietto è di: ${prezzover65} $`;
 
         } else{
             console.log("costo biglietto intero",prezzokm);
-            document.getElementById('prezzo').innerHTML=`Il costo del tuo biglietto: ${prezzokm} $`;
+            document.getElementById('prezzo').innerHTML=`Il costo del tuo biglietto è di: ${prezzokm} $`;
         }
 
     }
